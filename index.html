@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Micro Weather</title>
+    <link rel="stylesheet" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600,700" rel="stylesheet">
+</head>
+<body>
+
+<div id="container">
+
+    <div id="main__search">
+        <h1 class="headline">Weather Under-Underground Search</h1>
+        <form id="weather__search" onsubmit="setWeatherParams(); return false;" class="content"> 
+            <div class="form-group">
+            <label for="city">Search by City:</label>
+            <input type="text" name="city" id="city">
+            
+            <span class="or">- or -</span> <input type="checkbox" id="useMyLocation" name="useMyLocation" value="useMyLocation">
+            <span class="secondary-label">Use my current location.</span>
+            
+            </div>
+            <div class="form-group">
+            <label for="temp__type">Tempature Type:</label>
+                <span><input type="radio" name="temp__type" id="kelvin" value="kelvin"> <span class="secondary-label">Kelvin</span></span>
+                <span><input type="radio" name="temp__type" id="celsius" value="celsius"> <span class="secondary-label">Celsius</span></span>
+                <span><input type="radio" name="temp__type" id="fahrenheit" value="fahrenheit" checked="checked"> <span class="secondary-label">Fahrenheit</span></span>
+            </div>
+            
+        </form>
+        <div class="footer">    <button id="new__form__submission" class="button">What is the weather?</button>        </div>
+    </div>
+
+    <div id="weather__master">
+
+    <div id="weather__details">
+        <div class="weather__wrapper">
+            <div class="location">
+                <span id="city__name"></span><br /><span id="lat__long"></span>
+            </div>
+            <div class="image">
+                <span id="weather__image"></span>
+            </div>
+            <div class="message">
+                <span id="weather__message"></span>
+            </div>
+            
+            <div class="current">
+                <span id="current__temp"></span>
+            </div>
+            <div class="low">
+                <span class="weather-label">Low:</span> <span id="low__temp"></span>
+            </div>
+            <div class="high">
+                <span class="weather-label">High:</span> <span id="high__temp"></span>
+            </div>
+        
+            <div class="rise">
+                <span class="weather-label">Sunrise:</span> <span id="sunrise"></span>
+            </div>
+            <div class="set">
+                <span class="weather-label">Sunset:</span> <span id="sunset"></span>
+            </div>
+            
+        </div>
+        <span class="arrow"></span>
+    </div>
+
+    <!--<div id="map"></div>-->
+
+    <div id="globe" >
+        <img src="img/earth.svg">
+    </div>
+
+
+
+
+
+    <div id="inverse__weather__details">
+        <div class="weather__wrapper">
+            <div class="location">
+                <span id="inverse__city__name"> </span><br /><span id="invert__lat__long"></span>
+            </div>
+            <div class="image">
+                <span id="inverse__weather__image"></span>
+            </div>
+            <div class="message">
+                <span id="inverse__weather__message"></span>
+            </div>
+            
+            <div class="current">
+                    <span id="inverse__current__temp"></span>
+            </div>
+            <div class="low">
+                <span class="weather-label">Low:</span> <span id="inverse__low__temp"></span>
+            </div>
+            <div class="high">
+                <span class="weather-label">High:</span> <span id="inverse__high__temp"></span>
+            </div>
+        
+            <div class="rise">
+                <span class="weather-label">Sunrise:</span> <span id="inverse__sunrise"></span>
+            </div>
+            <div class="set">
+                <span class="weather-label">Sunset:</span> <span id="inverse__sunset"></span>
+            </div>
+            
+        </div>
+        <span class="arrow"></span>  
+    </div>
+
+    </div>
+    
+    <!-- <div id="inverted__map"></div> -->
+
+
+    
+   
+
+    <div id="new__lookup__wrapper">    <button id="new__lookup" class="button-globe">Check a different location</button>   <button id="invert" class="button-globe">Inverse Weather</button>        </div>
+
+</div>
+ <script src="js/script.js" type="text/javascript"></script>
+    
+</body>
+</html>
